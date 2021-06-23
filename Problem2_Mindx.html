@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Du doan ket qua so xo</title>
+    <style>
+      body {background-color: blue;}
+    </style>
+  </head>  
+  <body>
+<body>
+<h1 style="background-color:green;">Lucky Number</h1>
+<p style="background-color:Tomato;">Du doan con so cua ban trong khoang tu 1 den 10</p>
+<input type="number" id="abc"/> <button onclick="checkNum()" id="subm">Quay so</button>
+<h4 id="res"></h4>
+</body>
+
+<script>
+    function checkNum() {
+        var answer = document.getElementById("abc").value;
+        var res = document.getElementById("res");
+        if (answer.length == 0 || answer > 10 || answer < 1) {
+            res.innerHTML = "Ban chi co the nhap cac so tu nhien tu 1- 10";
+            return;
+        }
+
+        var result = Math.floor(1 + Math.random() * 10);
+        if (answer == result) {
+            res.innerHTML = "xin chuc mung ban da nhan duoc 1 chiec iPhone mau vang";
+        } else {
+            res.innerHTML = "Rat xin loi dap an la " + result;
+        }
+    }
+</script>
+</html>
